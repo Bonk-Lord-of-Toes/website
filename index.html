@@ -11,8 +11,10 @@
         xhr.open("GET","game.html")
         xhr.onload = function(){
             document.querySelector("iframe").src = xhr.response
+            console.log(xhr)
         }
         xhr.send()
+        console.log(xhr)
     </script>
 </body>
 </html>
