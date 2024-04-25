@@ -5,15 +5,15 @@
     <title>Website</title>
 </head>
 <body>
+    <iframe id="frame"></iframe>
     <script>
         var xhr = new XMLHttpRequest()
         xhr.open("GET","game.html")
         xhr.onload = function(){
             console.log(xhr.response)
-            document.querySelector("iframe").innerHTML = xhr.response
+            document.getElementById("frame").innerHTML = xhr.response
         }
         xhr.send()
     </script>
-    <iframe></iframe>
 </body>
 </html>
