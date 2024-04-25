@@ -11,7 +11,8 @@
         xhr.open("GET","game.html")
         xhr.onload = function(){
             console.log(xhr.responseText)
-            document.getElementById("frame").src = xhr.responseText
+              var serializer = new XMLSerializer()
+              document.getElementById("frame").srcdoc = serializer.serializeToString(xhr.responseXML)
         }
         xhr.send()
     </script>
