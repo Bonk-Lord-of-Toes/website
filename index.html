@@ -9,9 +9,10 @@
         var xhr = new XMLHttpRequest()
         xhr.open("POST","game.html")
         xhr.onload = function(){
-            console.log(xhr)
+            document.querySelector("iframe").innerHTML = xhr.response
         }
         xhr.send()
     </script>
+    <iframe></iframe>
 </body>
 </html>
