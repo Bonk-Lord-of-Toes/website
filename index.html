@@ -12,7 +12,7 @@
         xhr.onload = function(){
             console.log(xhr.responseText)
               var serializer = new XMLSerializer()
-              document.getElementById("frame").srcdoc = serializer.serializeToString(xhr.responseXML)
+              document.getElementById("frame").srcdoc = "<html><body><h1>OUhdsjf</h1></body></html>"
         }
         xhr.send()
     </script>
