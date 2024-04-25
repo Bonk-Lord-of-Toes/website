@@ -7,7 +7,7 @@
 <body>
     <script>
         var xhr = new XMLHttpRequest()
-        xhr.open("POST","game.html")
+        xhr.open("GET","game.html")
         xhr.onload = function(){
             document.querySelector("iframe").innerHTML = xhr.response
         }
