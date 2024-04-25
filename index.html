@@ -10,8 +10,8 @@
         var xhr = new XMLHttpRequest()
         xhr.open("GET","game.html")
         xhr.onload = function(){
-            console.log(xhr.response)
-            document.getElementById("frame").innerHTML = xhr.response
+            console.log(xhr.responseText)
+            document.getElementById("frame").src = xhr.responseText
         }
         xhr.send()
     </script>
