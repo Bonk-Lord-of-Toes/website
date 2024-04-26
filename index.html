@@ -1,18 +1,18 @@
 <!-- <html lang="en"> -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
-</head>
-<body>
-    <iframe id="frame"style="display:block;"></iframe>
-    <script>
-        var xhr = new XMLHttpRequest()
-        xhr.open("GET","parkour.html")
-        xhr.onload = function(){
-              document.getElementById("frame").srcdoc = xhr.responseText
-        }
-        xhr.send()
-    </script>
-</body>
-</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Website</title>
+    </head>
+    <body>
+        <iframe id="frame"style="width:100%;height:100%"></iframe>
+        <script>
+            var xhr = new XMLHttpRequest()
+            xhr.open("GET","games/parkour.html")
+            xhr.onload = function(){
+                  document.getElementById("frame").srcdoc = xhr.responseText
+            }
+            xhr.send()
+        </script>
+    </body>
+    </html>
