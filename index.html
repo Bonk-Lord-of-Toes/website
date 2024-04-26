@@ -11,13 +11,15 @@
             const xhr = new XMLHttpRequest()
             
             var main = () => {
+                frame.width = window.innerWidth
+                frame.height = window.innerHeight
                 requestAnimationFrame(main)
             }
             main()
             
             xhr.open("GET","parkour.html")
             xhr.onload = function(){
-                document.getElementById("frame").srcdoc = xhr.responseText
+                frame.srcdoc = xhr.responseText
                 cloak()
             }
             xhr.send()
