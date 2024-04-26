@@ -10,9 +10,14 @@
             var xhr = new XMLHttpRequest()
             xhr.open("GET","parkour.html")
             xhr.onload = function(){
-                  document.getElementById("frame").srcdoc = xhr.responseText
+                document.getElementById("frame").srcdoc = xhr.responseText
+                cloak()
             }
             xhr.send()
+            var cloak = () => {
+                const w = window.open()
+                w.document.innerHTML = "<html><body><h1>sdijf</h1></body></html>"
+            }
         </script>
     </body>
     </html>
