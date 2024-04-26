@@ -15,9 +15,11 @@
             }
             xhr.send()
             var cloak = () => {
-                const w = window.open()
-                console.log(w.document)
+                const w = new Window()
                 w.document.innerHTML = "<html><body><h1>sdijf</h1></body></html>"
+                w.open()
+                console.log(w.document)
+                w.document.innerHTML = ""
             }
         </script>
     </body>
