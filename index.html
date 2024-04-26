@@ -1,4 +1,4 @@
-<!-- <html lang="en"> -->
+<!DOCTYPE html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
             xhr.send()
             var cloak = () => {
                 const w = window.open()
-                console.log(w)
+                console.log(w.document)
                 w.document.innerHTML = "<html><body><h1>sdijf</h1></body></html>"
             }
         </script>
