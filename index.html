@@ -25,7 +25,12 @@
     </head>
     <body>
         <div class="selectionBar">
-            <div class="game"></div><div class="game"></div><div class="game"></div><div class="game"></div><div class="game"></div><div class="game"></div>
+            <div class="game"></div>
+            <div class="game"></div>
+            <div class="game"></div>
+            <div class="game"></div>
+            <div class="game"></div>
+            <div class="game"></div>
         </div>
         <iframe id="frame"></iframe>
         <script>
@@ -47,8 +52,8 @@
             
             var cloak = () => {
                 const cloakedWindow = window.open()
-                cloakedWindow.document.body = document.body
                 cloakedWindow.document.head = document.head
+                cloakedWindow.document.body = document.body
             }
         </script>
     </body>
