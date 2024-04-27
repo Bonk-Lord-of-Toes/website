@@ -20,7 +20,6 @@
             xhr.open("GET","parkour.html")
             xhr.onload = function(){
                 frame.srcdoc = xhr.responseText
-                cloak()
             }
             xhr.send()
             
