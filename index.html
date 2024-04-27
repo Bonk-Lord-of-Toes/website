@@ -26,7 +26,7 @@
             
             var cloak = () => {
                 const w = window.open()
-                w.document.body.innerHTML = document.innerHTML
+                w.document = document
             }
         </script>
     </body>
