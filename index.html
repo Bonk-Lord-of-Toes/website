@@ -46,8 +46,11 @@
             //     games[0]=xhr.responseText
             // }
             // xhr.send()
-
-            games[0] = xhr("parkour.html")
+            
+            async function requestFiles(){
+                games[0] = await xhr("parkour.html")
+            }
+            requestFiles()
 
             function toggleDropdown(){
                 if(selectionBar.style.height=="20vh"){
@@ -71,7 +74,7 @@
                 }
             }
 
-            async function xhr(file){
+            function xhr(file){
                 const xhr = new XMLHttpRequest()
                 xhr.open("GET",file)
                 console.log(xhr)
