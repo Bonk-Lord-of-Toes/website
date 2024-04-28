@@ -27,7 +27,7 @@
         </style>
     </head>
     <body style="background-color: black;">
-        <div class="selectionBar"style="height:20vh;"onclick(hideDropdown)>
+        <div class="selectionBar"style="height:20vh;"onclick="toggleDropdown()">
             <div class="gameIcon"></div>
             <div class="gameIcon"></div>
             <div class="gameIcon"></div>
@@ -46,7 +46,7 @@
             }
             xhr.send()
 
-            var hideDropdown = () => {
+            var toggleDropdown = () => {
                 if(selectionBar.style.height=="20vh"){
                     selectionBar.style.height = "0vh"
                     frame.style.height = "100vh"
