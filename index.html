@@ -64,6 +64,7 @@
 
             //shows dropdown if mouse enters top of the screen
             window.addEventListener("mouseMove",function(e){
+                console.log([e.clientX,window.clientHeight/5])
                 if(e.clientX<window.clientHeight/5){
                     selectionBar.style.height = "0vh"
                     frame.style.height = "100vh"
