@@ -37,16 +37,18 @@
         </div>
         <iframe seamless="seamless"allowtransparency="true"allowfullscreen="true"class="gameDisplay"style="height:80vh;"></iframe>
         <script>
-                        selectionBar.querySelectorAll("div")[0].addEventListener("click",console.log("hi"))
             const frame = document.body.querySelector("iframe")
             const selectionBar = document.body.querySelector("div")
+            selectionBar.querySelectorAll("div")[0].addEventListener("click",console.log("hi"))
             const games = []
-            const xhr = new XMLHttpRequest()
-            xhr.open("GET","parkour.html")
-            xhr.onload = function(){
-                games[0]=xhr.responseText
-            }
-            xhr.send()
+            // const xhr = new XMLHttpRequest()
+            // xhr.open("GET","parkour.html")
+            // xhr.onload = function(){
+            //     games[0]=xhr.responseText
+            // }
+            // xhr.send()
+
+            games[0]=xhr("parkour.html")
 
             function toggleDropdown(){
                 if(selectionBar.style.height=="20vh"){
@@ -68,10 +70,19 @@
                     frame.src = "https://zv1y2i8p.play.gamezop.com/g/Umfd7yvMd"
                 }
             }
+
+            function xhr(file){
+                const xhr = new XMLHttpRequest()
+                xhr.open("GET",file)
+                xhr.onload = function(){
+                    return xhr.responseText
+                }
+                xhr.send()
+            }
             
             function cloak(){
                 const cloakedWindow = window.open()
-                cloakedWindow.document.head.innerHTML = document.head.innerHTML
+                cloakedWindow.document.head = document.head
                 cloakedWindow.document.body = document.body
             }
         </script>
