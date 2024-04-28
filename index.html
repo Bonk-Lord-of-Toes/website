@@ -48,7 +48,7 @@
             // xhr.send()
             
             async function requestFiles(){
-                games[0] = await xhr("parkour.html")
+                games.push(await xhr("parkour.html"))
             }
             requestFiles()
 
