@@ -84,8 +84,10 @@
             
             function cloak(){
                 const cloakedWindow = window.open()
-                cloakedWindow.document.head = document.head
-                cloakedWindow.document.body = document.body
+                var cloakedFrame = cloakedWindow.document.createElement("iframe")
+                cloakedFrame.src = "https://bonk-lord-of-toes.github.io/website/"
+                cloakedFrame.style = "border:0px;width:100%;height:100vh;"
+                cloakedWindow.document.body.appendChild(cloakedFrame)
             }
         </script>
     </body>
