@@ -35,7 +35,7 @@
             <div class="gameIcon"></div>
             <div class="gameIcon"></div>
         </div>
-        <iframe class="gameDisplay"style="height:80vh;"></iframe>
+        <iframe seamless="seamless"allowtransparency="true"allowfullscreen="true"class="gameDisplay"style="height:80vh;"></iframe>
         <script>
             const frame = document.body.querySelector("iframe")
             const selectionBar = document.body.querySelector("div")
@@ -57,8 +57,8 @@
             }
 
             var changeGame = (game) => {
-                if(game="Viking"){
-                    frame.seamless= "seamless"
+                if(game=="Viking"){
+                    frame.seamless = "seamless"
                     frame.allowtransparency = "true"
                     frame.allowfullscreen = "true"
                     frame.frameborder = "0"
