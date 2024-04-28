@@ -30,7 +30,7 @@
         <div class="selectionBar"style="height:20vh;">
             <div class="gameIcon"onclick="changeGame(0)"></div>
             <div class="gameIcon"onclick="changeGame(1)"></div>
-            <div class="gameIcon"></div>
+            <div class="gameIcon"onclick="changeGame(2)"></div>
             <div class="gameIcon"></div>
             <div class="gameIcon"></div>
             <div class="gameIcon"></div>
@@ -61,6 +61,9 @@
                 if(game==1){
                     frame.src = "https://zv1y2i8p.play.gamezop.com/g/Umfd7yvMd"
                 }
+                if(game==2){
+                    frame.srcdoc = games[1]
+                }
             }
 
             function xhr(file,storage){
@@ -73,6 +76,7 @@
                 xhr.send()
             }
             xhr("parkour.html",0)
+            xhr("hangman.html",2)
             
             function cloak(){
                 const cloakedWindow = window.open()
