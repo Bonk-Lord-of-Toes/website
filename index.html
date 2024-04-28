@@ -46,11 +46,6 @@
             //     games[0]=xhr.responseText
             // }
             // xhr.send()
-            
-            async function requestFiles(){
-                games.push(await xhr("parkour.html"))
-            }
-            requestFiles()
 
             function toggleDropdown(){
                 if(selectionBar.style.height=="20vh"){
@@ -74,13 +69,12 @@
                 }
             }
 
-            function xhr(file){
+            function xhr(file,storage){
                 const xhr = new XMLHttpRequest()
                 xhr.open("GET",file)
-                console.log(xhr)
                 xhr.onload = function(){
                 console.log(xhr)
-                    return xhr.responseText
+                    games[storage] = xhr.response
                 }
                 xhr.send()
             }
