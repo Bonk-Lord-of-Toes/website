@@ -58,7 +58,8 @@
             }
 
             var changeGame = (game) => {
-                frame.src="about:blank"
+                frame.removeAttribute("src")
+                frame.removeAttribute("srcdoc")
                 if(game=="box"){
                     frame.srcdoc = games[0]
                 }
