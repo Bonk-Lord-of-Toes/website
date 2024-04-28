@@ -61,6 +61,17 @@
                 cloakedWindow.document.head.innerHTML = document.head.innerHTML
                 cloakedWindow.document.body = document.body
             }
+
+            //shows dropdown if mouse enters top of the screen
+            window.addEventListener("mouseMove",function(e){
+                if(e.clientX<window.clientHeight/5){
+                    selectionBar.style.height = "0vh"
+                    frame.style.height = "100vh"
+                    return
+                }
+                selectionBar.style.height = "20vh"
+                frame.style.height = "80vh"
+            })
         </script>
     </body>
     </html>
