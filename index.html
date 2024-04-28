@@ -40,12 +40,6 @@
             const frame = document.body.querySelector("iframe")
             const selectionBar = document.body.querySelector("div")
             const games = []
-            // const xhr = new XMLHttpRequest()
-            // xhr.open("GET","parkour.html")
-            // xhr.onload = function(){
-            //     games[0]=xhr.responseText
-            // }
-            // xhr.send()
 
             function toggleDropdown(){
                 if(selectionBar.style.height=="20vh"){
@@ -78,6 +72,7 @@
                 }
                 xhr.send()
             }
+            xhr("parkour.html",0)
             
             function cloak(){
                 const cloakedWindow = window.open()
