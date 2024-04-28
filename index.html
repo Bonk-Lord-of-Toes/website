@@ -39,7 +39,6 @@
         <script>
             const frame = document.body.querySelector("iframe")
             const selectionBar = document.body.querySelector("div")
-            selectionBar.querySelectorAll("div")[0].addEventListener("click",console.log("hi"))
             const games = []
             // const xhr = new XMLHttpRequest()
             // xhr.open("GET","parkour.html")
@@ -74,7 +73,9 @@
             function xhr(file){
                 const xhr = new XMLHttpRequest()
                 xhr.open("GET",file)
+                console.log(xhr)
                 xhr.onload = function(){
+                console.log(xhr)
                     return xhr.responseText
                 }
                 xhr.send()
