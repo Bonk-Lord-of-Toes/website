@@ -28,8 +28,8 @@
     </head>
     <body style="background-color: black;">
         <div class="selectionBar"style="height:20vh;">
-            <div class="gameIcon"onclick="changeGame(\"box\")"></div>
-            <div class="gameIcon"onclick="changeGame(\"viking\")"></div>
+            <div class="gameIcon"></div>
+            <div class="gameIcon""></div>
             <div class="gameIcon"></div>
             <div class="gameIcon"></div>
             <div class="gameIcon"></div>
@@ -38,6 +38,7 @@
         <iframe seamless="seamless"allowtransparency="true"allowfullscreen="true"class="gameDisplay"style="height:80vh;"></iframe>
         <script>
             const frame = document.body.querySelector("iframe")
+            frame.
             const selectionBar = document.body.querySelector("div")
             const games = []
             const xhr = new XMLHttpRequest()
@@ -58,6 +59,7 @@
             }
 
             var changeGame = (game) => {
+                frame.src="about:blank"
                 if(game=="box"){
                     frame.srcdoc = games[0]
                 }
@@ -72,6 +74,8 @@
                 cloakedWindow.document.body = document.body
             }
 
+            //sets div games
+            selectionBar.querySelectorAll.addEventListener("click",changeGame("box'))
 
         </script>
     </body>
