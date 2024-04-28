@@ -37,6 +37,7 @@
         </div>
         <iframe seamless="seamless"allowtransparency="true"allowfullscreen="true"class="gameDisplay"style="height:80vh;"></iframe>
         <script>
+                        selectionBar.querySelectorAll("div")[0].addEventListener("click",console.log("hi"))
             const frame = document.body.querySelector("iframe")
             const selectionBar = document.body.querySelector("div")
             const games = []
@@ -73,9 +74,6 @@
                 cloakedWindow.document.head.innerHTML = document.head.innerHTML
                 cloakedWindow.document.body = document.body
             }
-
-            selectionBar.querySelectorAll("div")[0].addEventListener("click",changeGame("box"))
-
         </script>
     </body>
     </html>
