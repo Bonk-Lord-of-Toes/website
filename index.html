@@ -28,7 +28,7 @@
         </style>
     </head>
     <body style="background-color: black;">
-        <div class="selectionBar"style="height:20vh;">
+        <div class="selectionBar"style="height:20vh;"onclick(hideDropdown)>
             <div class="game"></div>
             <div class="game"></div>
             <div class="game"></div>
@@ -47,16 +47,11 @@
             }
             xhr.send()
 
-            var makeShiftCSSDropdownAnimation = (dir) => {
-                if(dir==-1){
-                    for(var i=0;i<20;i++){
-                        selectBar.style.height = (20-i)+"vh"
-                    }
-                return
-                }
-
-                for(var i=0;i<20;i++){
-                    selectionBar.style.height = i+"vh"
+            var hideDropdown = () => {
+                if(selectionBar.style.height=="20vh"){
+                    selectionBar.style.height = "0vh"
+                } else{
+                    selectionBar.style.height = "20vh"
                 }
             }
             
