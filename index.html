@@ -56,7 +56,7 @@
             
             var cloak = () => {
                 const cloakedWindow = window.open()
-                cloakedWindow.document.head = document.head
+                cloakedWindow.document.head.innerHTML = document.head.innerHTML
                 cloakedWindow.document.body = document.body
             }
         </script>
