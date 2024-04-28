@@ -26,15 +26,15 @@
         </style>
     </head>
     <body style="background-color: black;">
-        <div class="selectionBar"style="height:15vh;">
+        <div class="selectionBar"style="height:20vh;">
             <img class="gameIcon"onclick="changeGame(0)"src="boxIcon.png"></img>
             <img class="gameIcon"onclick="changeGame(1)"src="vikingIcon.png"></img>
             <img class="gameIcon"onclick="changeGame(2)"src="racingIcon.png"></img>
-            <div class="gameIcon"onclick="changeGame(3)"></div>
-            <div class="gameIcon"></div>
+            <img class="gameIcon"onclick="changeGame(3)"src="slopeIcon.png"></img>
+            <img class="gameIcon"onclick="changeGame(4)"src=""></img>
             <div class="gameIcon"></div>
         </div>
-        <iframe seamless="seamless"allowtransparency="true"allowfullscreen="true"class="gameDisplay"style="height:85vh;"></iframe>
+        <iframe seamless="seamless"allowtransparency="true"allowfullscreen="true"class="gameDisplay"style="height:80vh;"></iframe>
         <script>
             const frame = document.body.querySelector("iframe")
             const selectionBar = document.body.querySelector("div")
@@ -65,6 +65,9 @@
                 }
                 if(game==3){
                     frame.src = "https://storage.y8.com/y8-studio/unity/joll/slope/?key=9757549&value=80527"
+                }
+                if(game==4){
+                    frame.src = ""
                 }
             }
 
