@@ -47,7 +47,7 @@
             <h1 class="prettyText">Cloak?</h1>
             <p class="prettyText">Hey! I(more like my website) noticed that you haven't cloaked your tab in an about:blank(which is fine). However, I would recommend clicking below to clone this website in an about:blank.</p>
             <span class="prettyText" onclick="cloak()">Cloak Me Daddy</span>
-            <span class="prettyText" onclick="">Imma Go Raw</span>
+            <span class="prettyText" onclick="removeAlert()">Imma Go Raw</span>
         </div>
         <div class="selectionBar"style="height:9vh;">
             <img class="gameIcon"onclick="changeGame(0)"src="boxIcon.png"></img>
@@ -65,7 +65,7 @@
         <iframe seamless="seamless"allowtransparency="true"allowfullscreen="true"class="gameDisplay"style="height:81vh;"></iframe>
         <script>
             const frame = document.body.querySelector("iframe")
-            const selectionBar = document.body.querySelector("div")
+            const selectionBar = document.body.querySelectorAll("div")[1]
             const games = []
 
             function toggleDropdown(){
@@ -123,8 +123,13 @@
                 xhr.send()
             }
             xhr("parkour.html",0)
+
+            function removeAlert(){
+                document.body.removeChild(document.body.querySelector("div"))
+            }
             
             function cloak(){
+                removeAlert()
                 const cloakedWindow = window.open()
                 var cloakedFrame = cloakedWindow.document.createElement("iframe")
                 cloakedFrame.src = "https://bonk-lord-of-toes.github.io/website/"
