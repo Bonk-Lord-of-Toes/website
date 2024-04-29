@@ -25,8 +25,8 @@
             }      
         </style>
     </head>
-    <body style="background-color: black;">
-        <div class="selectionBar"style="height:6vh;">
+    <body style="background-color: black; overflow:clip;">
+        <div class="selectionBar"style="height:9vh;">
             <img class="gameIcon"onclick="changeGame(0)"src="boxIcon.png"></img>
             <img class="gameIcon"onclick="changeGame(4)"src="galacticIcon.png"></img>
             <img class="gameIcon"onclick="changeGame(6)"src="happyIcon.jpg"></img>
@@ -38,7 +38,7 @@
             <img class="gameIcon"onclick="changeGame(2)"src="racingIcon.png"></img>
             <img class="gameIcon"onclick="changeGame(3)"src="slopeIcon.png"></img>
         </div>
-        <iframe seamless="seamless"allowtransparency="true"allowfullscreen="true"class="gameDisplay"style="height:84vh;"></iframe>
+        <iframe seamless="seamless"allowtransparency="true"allowfullscreen="true"class="gameDisplay"style="height:81vh;"></iframe>
         <script>
             const frame = document.body.querySelector("iframe")
             const selectionBar = document.body.querySelector("div")
