@@ -45,7 +45,7 @@
     <body style="background-color: black; overflow:clip;">
         <div class="alert">
             <h1 class="prettyText">Cloak?</h1>
-            <p class="prettyText">Hey! I(more like my website) noticed that you haven't cloaked your tab in an about:blank(which is fine). However, I would recommend clicking below to clone this website in an about:blank.</p>
+            <p class="prettyText">Hey! I(more like my website) noticed that you haven't cloaked your tab in an about:blank(which is fine). However, I would recommend clicking below to cloak this website in an about:blank.</p>
             <span class="prettyText" onclick="cloak()">Cloak Me Daddy</span>
             <span class="prettyText" onclick="removeAlert()">Imma Go Raw</span>
         </div>
@@ -114,6 +114,13 @@
                 }
             }
 
+            //removes alert if window is in cloaked about:blank
+            try {
+                    return window.self !== window.top;
+            } catch (e) {
+                    removeAlert()
+            }
+
             function xhr(file,storage){
                 const xhr = new XMLHttpRequest()
                 xhr.open("GET",file)
@@ -129,7 +136,6 @@
             }
             
             function cloak(){
-                removeAlert()
                 const cloakedWindow = window.open()
                 var cloakedFrame = cloakedWindow.document.createElement("iframe")
                 cloakedFrame.src = "https://bonk-lord-of-toes.github.io/website/"
