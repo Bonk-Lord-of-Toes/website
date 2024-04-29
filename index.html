@@ -26,8 +26,8 @@
 
             div.alert{
                 position:absolute;
-                left:20vw;
-                top:20vh;
+                left:35vw;
+                top:35vh;
                 width:30vw;
                 height:30vh;
                 background-color:rgb(50,50,50);
@@ -36,7 +36,8 @@
             }
 
             .prettyText{
-                  font-family: "Monospace"
+                margin-left:10px;
+                margin-right:10px;
             }
             
         </style>
@@ -45,8 +46,8 @@
         <div class="alert">
             <h1 class="prettyText">Cloak?</h1>
             <p class="prettyText">Hey! I(more like my website) noticed that you haven't cloaked your tab in an about:blank(which is fine). However, I would recommend clicking below to clone this website in an about:blank.</p>
-            <span class="prettyText">Cloak Me Daddy</span>
-            <span class="prettyText">Imma Go Raw</span>
+            <span class="prettyText" onclick="cloak()">Cloak Me Daddy</span>
+            <span class="prettyText" onclick="">Imma Go Raw</span>
         </div>
         <div class="selectionBar"style="height:9vh;">
             <img class="gameIcon"onclick="changeGame(0)"src="boxIcon.png"></img>
