@@ -115,10 +115,15 @@
             }
 
             //removes alert if window is in cloaked about:blank
-            try {
+            function inFrame(){
+                try {
                     return window.self !== window.top;
-            } catch (e) {
-                    removeAlert()
+                } catch (e) {
+                    return true
+                }
+            }
+            if(inFrame){
+                removeAlert()
             }
 
             function xhr(file,storage){
